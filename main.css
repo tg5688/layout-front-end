@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #686868;
+    padding: 15px;
+}
+
+hr {
+    margin: 20px 0;
+    height: 2px;
+    background: #8b8b8b;
+}
+
+section {
+    padding: 20px 0;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 40px);
+    display: block;
+    height: 3px;
+    width: 80px;
+    background: #D07C7C;
+}
+
+header {
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    background-image: url('https://i.imgur.com/eiwWjp3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+}
+
+header .head-text {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+}
+
+header h1 {
+    margin: 15px 0;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+header h2 {
+    position: relative;
+    margin: 20px 0;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 50px);
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #FFF;
+}
+
+header h3 {
+    margin-top: 60px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+nav {
+    display: none;
+}
+
+#about,
+#worth,
+#technologies,
+#contact {
+    margin: 40px auto;
+    text-align: center;
+}
+
+section h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+#about p {
+    line-height: 1.6;
+}
+
+#technologies figure {
+    position: relative;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#technologies figure:first-child {
+    margin-top: 0;
+}
+
+#technologies .last {
+    margin-bottom: 0;
+}
+
+#technologies .imgs {
+    margin-top: 40px;
+}
+
+#technologies figure::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+#technologies figure:hover::before {
+    opacity: 0.7;
+}
+
+#technologies figure img {
+    display: block;
+    width: 100%;
+}
+
+#technologies figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    color: #FFF;
+    line-height: 2;
+    transition: all 1s ease-in-out;
+}
+
+#technologies figcaption::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    top: calc(50% + 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+}
+
+#technologies .text-top {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+#technologies .text-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 2px solid #FFF;
+    border-left: 2px solid #FFF;
+    width: 20px;
+    height: 20px;
+    transition: all 1s ease-in-out;
+}
+
+#technologies .text-top::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    width: 20px;
+    height: 20px;
+    transition: all 1s ease-in-out;
+}
+
+#technologies .text-bottom {
+    position: relative;
+}
+
+#technologies .text-bottom::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid #FFF;
+    border-left: 2px solid #FFF;
+    width: 20px;
+    height: 20px;
+    transition: all 1s ease-in-out;
+}
+
+#technologies .text-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    width: 20px;
+    height: 20px;
+    transition: all 1s ease-in-out;
+}
+
+#technologies figure:hover .text-top::before {
+    left: -20px;
+    top: -20px;
+}
+
+#technologies figure:hover .text-top::after {
+    right: -20px;
+    top: -20px;
+}
+
+#technologies figure:hover .text-bottom::before {
+    left: -20px;
+    bottom: -20px;
+}
+
+#technologies figure:hover .text-bottom::after {
+    right: -20px;
+    bottom: -20px;
+}
+
+#contact {
+    position: relative;
+    padding: 20px 0;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/0IRYG66.jpg') no-repeat center center;
+    opacity: .1;
+    z-index: -1;
+}
+
+#contact form {
+    margin: 20px;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 10px;
+    border: 2px solid #D07C7C;
+    width: 100%;
+}
+
+#contact form input[type=email] {
+    margin-top: 10px;
+}
+
+#contact form textarea {
+    margin-top: 10px;
+}
+
+#contact form p {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+#contact button {
+    background-color: #D07C7C;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 0.75rem;
+}
+
+footer h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+@media (min-width: 568px) {
+    #technologies .html {
+        width: 100%;
+    }
+
+    #technologies .css,
+    #technologies .js {
+        display: inline-block;
+        width: 48%;
+    }
+
+    #technologies .css {
+        margin-top: 0;
+        margin-right: 10px;
+    }
+
+    #technologies .js {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width:768px) {
+
+    #about,
+    #worth,
+    #technologies,
+    #video,
+    #contact {
+        margin: 80px auto;
+    }
+
+    header .head-text {
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    header h1 {
+        margin: 50px 0;
+        font-size: 28px;
+    }
+
+    header h2 {
+        font-size: 52px;
+    }
+
+
+    header h3 {
+        font-size: 20px;
+    }
+
+    nav {
+        display: block;
+        float: right;
+        width: 80%;
+    }
+
+    nav ul {
+        list-style: none;
+        font-size: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 20px;
+        padding: 20px;
+    }
+
+    nav a {
+        position: relative;
+        display: block;
+        font-size: 20px;
+        color: #686868;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        overflow: hidden;
+        padding: 5px 0;
+    }
+
+    nav a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        height: 3px;
+        background: #D07C7C;
+        transition: .4s;
+    }
+
+    nav a:hover {
+        color: #D07C7C;
+    }
+
+    nav a:hover::before {
+        left: 0;
+    }
+
+    #technologies .text-top {
+        font-size: 26px;
+    }
+
+    #technologies .text-bottom {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    header .head-text {
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    nav {
+        width: 60%;
+    }
+
+    #about,
+    #worth,
+    #video,
+    #contact {
+        width: 85%;
+    }
+
+    #about h2,
+    #worth h2,
+    #contact h2 {
+        font-size: 26px;
+    }
+
+    #about p,
+    #worth p,
+    #contact p {
+        font-size: 22px;
+    }
+
+
+
+    #technologies .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    #technologies .column-lg {
+        margin-right: 20px;
+    }
+
+    #contact form {
+        margin-right: auto;
+        margin-left: auto;
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    nav {
+        width: 49%;
+    }
+}
